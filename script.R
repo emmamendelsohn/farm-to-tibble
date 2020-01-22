@@ -12,6 +12,7 @@ flowers <- xml2::xml_find_all(page, xpath="//a[@class='c-navigation-block__link 
 flowers <- flowers[c(-37, -75)]
 
 #get varieties
+#TODO - need to show all varieties on the page https://www.johnnyseeds.com/flowers/stock/?sz=18&start=18
 df <- map_df(flowers, function(flower){
   page <- xml2::read_html(flower)
   
