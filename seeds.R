@@ -1,7 +1,5 @@
 library(tidyverse)
 
-#TODO go back and get stock from scraper
-
 seeds <- read_csv("seeds.csv") %>%
   mutate(Variety = paste(class, variety, sep = " - "),
          Crop = "Flower") %>%
